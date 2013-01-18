@@ -54,6 +54,14 @@ lvector.Layer = lvector.Class.extend({
     getMap: function() {
         return this.options.map;
     },
+
+    onAdd: function() {
+        this.setMap(this.options.map)
+    },
+
+    onRemove: function() {
+        this.setMap(null)
+    },
     
     setOptions: function(o) {
         // TODO - Merge new options (o) with current options (this.options)
