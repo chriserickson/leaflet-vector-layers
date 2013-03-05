@@ -55,12 +55,13 @@ lvector.Layer = lvector.Class.extend({
         return this.options.map;
     },
 
-    onAdd: function() {
-        this.setMap(this.options.map)
+    onAdd: function(map) {
+        this.setMap(map)
     },
 
-    onRemove: function() {
-        this.setMap(null)
+    onRemove: function(map) {
+	if (map == this.options.map)
+        	this.setMap(null)
     },
     
     setOptions: function(o) {
