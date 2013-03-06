@@ -61,7 +61,7 @@ lvector.Layer = lvector.Class.extend({
 
     onRemove: function(map) {
 	if (map == this.options.map)
-        	this.setMap(null)
+	    this.setMap(null)
     },
     
     setOptions: function(o) {
